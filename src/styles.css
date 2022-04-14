@@ -1,0 +1,471 @@
+/**Estilos para el sitio web*/
+
+:root {
+  --text-color: rgb(0,0,0);
+  --contrast-color: rgb(177, 60, 60);
+  --bg-dark-color: rgb(0,0,0);
+  --bg-light-color: rgba(0,0,0,0.1); 
+  --text-light-color: rgba(255, 255, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Alegreya', serif;
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+p {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3.25rem;
+  line-height: 1em;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: var(--contrast-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--text-color);
+}
+
+cite{
+  font-size: small;
+  font-family: Georgia, Times, serif;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.img-fluid {
+  width: 100%;
+  height: 50%; 
+}
+
+.video-fluid {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.video-fluid-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-fluid::before {
+  display: block;
+  content: "";
+  padding-top: 56.25%;
+}
+
+figure {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 1rem;
+  padding-top: 15px;
+}
+
+
+/*Clase para esconder un elemento que será visible únicamente a los lectores de pantalla /(aplicado para mejorar la accesibilidad)*/
+.sr {
+  position:absolute;
+  height:1px;    
+  width:1px;    
+  overflow:hidden;    
+  clip:rect(1px, 1px, 1px, 1px);
+}
+
+/************************************************************
+Contenedores del sitio
+*************************************************************/
+header {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-family: 'Open Sans', sans-serif; 
+}
+
+footer {
+  height: 35vh;
+  padding-top: 15px;
+  padding-bottom: 15px;    
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  background-image: url(img/footer.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom center ;
+}
+
+main {
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+}
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/************************************************************
+Contenidos del header
+*************************************************************/
+.brand {
+  text-align:center;
+}
+
+@media (min-width: 992px) {
+  .brand {
+      text-align: left;
+  }
+}
+
+/************************************************************
+Menú de navegación del sitio
+*************************************************************/
+nav.nav {
+  text-align: center;
+  color: var(--text-color);
+}
+nav.nav ul {
+  margin-top: 15px;
+  list-style-type: none;
+}
+
+nav.nav ul li {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+nav.nav ul li a {
+  color: inherit;
+}
+
+nav.nav ul li a:hover {
+  border: none;
+  color: var(--contrast-color);
+}
+
+nav.nav a.active {
+  border-bottom: 3px solid currentColor;
+}
+
+nav.nav a.active:hover {
+  border-bottom: 3px solid currentColor;
+}
+
+@media (min-width: 992px) {
+  nav.nav {
+      text-align: left;
+  }
+  nav.nav ul li {
+      display: inline-block;
+      font-size: 2.5rem;
+      font-weight: 800;
+      padding-right: 30px;
+  }    
+  nav.nav ul li:last-child {
+      padding-right: 0;
+  }
+}
+
+
+/************************************************************
+Contenidos del pie de página
+*************************************************************/
+footer ul li {
+  font-size: small;
+  display: block;
+  padding-left: 15px;
+}
+footer p{
+  font-size:small;
+}
+
+footer a {
+  color:rgb(197, 7, 7);
+}
+
+footer a:hover {
+  color:black;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  footer ul li {
+    font-size: 1.2rem;
+    display:inline-block;
+    padding-left: 15px;
+  }
+
+  footer p{
+    font-size: 1.2rem;
+  }
+}
+
+
+/************************************************************
+Página index.html 
+*************************************************************/
+.p1 {
+  height: 40vh;
+  background-color: var(--bg-dark-color);
+  background-image: url(img/stephen.jpg);
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: top right ;
+  color: var(--text-light-color);
+  padding: 10px 0;
+}
+
+.p1 h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+.p1 p {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.categoria h2 {
+  line-height: 1.2;
+}
+
+@media (min-width: 992px) {
+  .p1 {
+      height: 70vh;
+      background-size: contain;
+      background-position: top right;
+  }
+  .p1 h1 {
+      font-size: 6.25rem;
+      font-weight: 700;
+  }
+  .p1 p {
+      font-size: 3.25rem;
+  }
+
+  .categoria {
+    display: flex;
+  }
+
+  .categoria img{
+    width: 200px;
+    height: 150px;
+    padding: 10px;
+  }
+
+  .categoria figure:nth-child(odd) {
+    background-color:rgb(217, 217, 217);
+  }
+}
+
+/************************************************************
+Página categoria.html
+*************************************************************/
+.board {
+  width: 100%;
+}
+
+.cat ul {
+  margin-left: 2rem;
+  list-style-type: square;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.cat h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-bottom: 4px solid currentColor;
+  border-color: rgb(135, 135, 139);
+}
+.cat h1{
+  text-shadow: 10px 10px 10px rgb(197, 7, 7);;
+}
+
+
+/************************************************************
+Página detall.html
+*************************************************************/
+blockquote {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  padding: 15px 30px;
+  background-color: #eee;
+  border-right: 4px solid #9a0150;
+  text-align: left;
+}
+
+@media (min-width: 992px) {
+  blockquote {
+    width: 75%;
+    text-align: right;
+  }
+}
+
+.det h1{
+  text-shadow: 10px 10px 10px rgb(197, 7, 7);
+}
+
+/************************************************************
+Página presentación.html
+*************************************************************/
+.presentacio h2 {
+  border-bottom: 4px solid currentColor;
+  border-color: rgb(135, 135, 139);
+}
+
+.presentacio h1{
+  text-shadow: 10px 10px 10px rgb(197, 7, 7);;
+}
+
+.biblio p{
+  text-align: center;
+}
+
+.nov {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  padding: 15px 30px;
+  background-color: #eee;
+  border-right: 4px solid #9a0150;
+  text-align: left;
+}
+
+#fechadif, #fechadif2, #fechadif3, #fechadif4, #fechahoy{
+  text-align: center;
+  font-size:2em;
+  color:rgb(197, 7, 7);
+  text-shadow: 10px 10px 10px rgb(60, 58, 58);
+  margin:12px;
+}
+
+#fechahoy {
+    text-align: left;
+    font-size:2.5em;
+}
+
+@media (min-width: 992px) {
+  .biblio {
+    display: flex;
+  }
+
+  .biblio img{
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+  }
+
+ .presentacio figure{
+    width: 50%;
+  }
+
+  .cine{
+    display: flex;
+  }
+
+  .cine figure{
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+  }
+
+  .documentales{
+    display:flex;
+  }
+
+  .documentales figure{
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+  }
+  
+  @media (min-width: 992px) {
+    .nov {
+      width: 75%;
+      text-align: right;
+    }
+  }
+
+}
+
+/************************************************************
+Página enlaces.html
+*************************************************************/
+.enlaces h1{
+  text-shadow: 10px 10px 10px rgb(197, 7, 7);;
+}
+
+.enlaces h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-bottom: 4px solid currentColor;
+  border-color: rgb(135, 135, 139);
+}
