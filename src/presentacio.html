@@ -16,7 +16,8 @@
   <header>
       <div class="container">
           <div class="brand">
-              <a href="index.html"><img src="img/logo.png" alt="logo del sitio" title="Stephen King" width="300" height="200"></a>
+            <a href="index.html"><img src="img/logo.png" alt="logo del sitio" title="Stephen King" width="100" height="150"></a>
+            <h1>Todo sobre Stefhen king</h1>   
           </div>
           <nav class="nav">
               <ul>
@@ -31,8 +32,8 @@
   <main id="main" class="presentacio">
     <div class="container">
         <h1>Presentación</h1>
-
-        <section class="board"> 
+        <img src="libro.svg" alt="insertar SVG con la etiqueta image" class="estilo_svg">
+        <section class="board">
             <h2>Sobre este sitio</h2>
             <p><b>Stephen Edwin King </b>más conocido como <b>Stephen King </b>y ocasionalmente por su pseudónimo <b>Richard Bachman</b>, es un escritor estadounidense de novelas de terror, ficción sobrenatural, misterio, ciencia ficción y literatura fantástica. Sus libros han vendido más de 350 millones de ejemplares y en su mayoría han sido adaptados al cine y a la televisión. Ha publicado 61 novelas (siete de ellas, bajo el pseudónimo <b>Richard Bachman</b>) y siete libros de no ficción. Ha escrito, además, alrededor de doscientos relatos y novelas cortas, la mayoría de los cuales han sido recogidos en once colecciones. </p>
             <p>Este sitio pretende dar a conocer este fantástico escritor i dar un repaso a su vida, bibliografia así como sus principales adaptaciones cinematográficas.</p>
@@ -53,20 +54,26 @@
             <p>En esta sección podemos encontrar todo (o casi todo) lo que Stephen King escribió.</p>
             <div class="container">
                 <div class="biblio">
-                    <figure>
-                        <a href="https://stephenking.com.ar/bibliografia/bibliografia-carrie-1974/"><img src="img/Carrie.jpg" alt="Carrie" class="img-fluid"></a>
-                        <figcaption>Carrie - 1974</figcaption>
-                    </figure>
-            
-                    <figure>      
-                        <a href="https://stephenking.com.ar/bibliografia/bibliografia-the-dead-zone-1980/"><img src="img/zona.jpg" alt="La zona muerta" class="img-fluid"></a>   
-                        <figcaption>La zona muerta - 1979</figcaption>
-                    </figure> 
+                    <picture>
+                        <source media="(min-width: 900px)"srcset="img/Carrie.jpg">
+                        <source media="(min-width: 550px)" srcset="img/Carrie_m.jpg">
+                        <img src="img/Carrie_p.jpg" alt="Carrie">
+                        <p>Carrie - 1974</p>
+                    </picture>
 
-                     <figure> 
-                        <a href="https://stephenking.com.ar/bibliografia/bibliografia-the-dart-tower-i-the-gunslinger-1982/"><img src="img/Torre1.jpg" alt="La torre oscura I: La hierba del diablo" class="img-fluid"></a>
-                        <figcaption>La torre oscura I: La hierba del diablo - 1982</figcaption>
-                    </figure>
+                    <picture>
+                        <source media="(min-width: 900px)"srcset="img/zona.jpg">
+                        <source media="(min-width: 550px)" srcset="img/zona_m.jpg">
+                        <img src="img/zona_p.jpg" alt="La zona muerta">
+                        <p>La zona muerta - 1979</p>
+                    </picture>
+
+                    <picture>
+                        <source media="(min-width: 900px)"srcset="img/Torre1.jpg">
+                        <source media="(min-width: 550px)" srcset="img/Torre1_m.jpg">
+                        <img src="img/Torre1_p.jpg" alt="La torre oscura I">
+                        <p>La torre oscura I: La hierba del diablo - 1982</p>
+                    </picture>
                 </div> 
             </div>
         </section>
@@ -136,6 +143,14 @@
         <section class="board"> 
             <h2><a href="">Novedades</a></h2>
                 <div id="fechahoy"> </div>
+                    <svg class="estilo_svg" version="1.1" id="L2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                        <circle fill="#eee" stroke="rgb(135, 135, 139)" stroke-width="4" stroke-miterlimit="10" cx="50" cy="50" r="48"/>
+                        <line class="l1" fill="none" stroke-linecap="round" stroke="rgb(197, 7, 7)" stroke-width="4" stroke-miterlimit="10" x1="50" y1="50" x2="85" y2="50.5">
+                        </line>
+                        <line class="l2" fill="none" stroke-linecap="round" stroke="rgb(197, 7, 7)" stroke-width="4" stroke-miterlimit="10" x1="50" y1="50" x2="49.5" y2="74">
+                        </line>
+                    </svg>
             <div class="nov">
                 <p><strong>«La pluma mágica de Gwendy»</strong></p>
                 <p>Fecha de publicación en España</p>
@@ -176,13 +191,20 @@
   </main> 
   <footer>
     <div class="container">
-        <p>2022 &copy; Maria del Mar Pena Cirac</p><br/>
+        <a href="index.html"><img src="img/logo.png" alt="logo del sitio" title="Stephen King" width="50" height="55"></a> 
+        <p>2022 &copy; Maria del Mar Pena Cirac</p>
+        <ul>
+            <li><a href="categoria.html">Categoria</a></li>
+            <li><a href="presentacio.html">Presentación</a></li>
+            <li><a href="enllaços.html">Enlaces</a></li>
+        </ul>
+        <hr>
         <ul>
             <li><a href="">Avís legal</a></li>
             <li><a href="">Política de privacitat</a></li>
             <li><a href="">Política de cookies</a></li>
         </ul>
     </div> 
-  </footer>
+</footer>
 </body>
 </html>

@@ -81,7 +81,7 @@ h2 {
   padding-top: 56.25%;
 }
 
-figure {
+figure{
   margin-top: 30px;
   margin-bottom: 30px;
   width: 90%;
@@ -95,7 +95,11 @@ figcaption {
   padding-top: 15px;
 }
 
-
+picture p{
+  font-size: 1rem;
+  padding-top: 15px;
+  text-align: center;
+}
 /*Clase para esconder un elemento que será visible únicamente a los lectores de pantalla /(aplicado para mejorar la accesibilidad)*/
 .sr {
   position:absolute;
@@ -115,9 +119,7 @@ header {
 }
 
 footer {
-  height: 35vh;
   padding-top: 15px;
-  padding-bottom: 15px;    
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
@@ -174,6 +176,10 @@ Contenidos del header
 *************************************************************/
 .brand {
   text-align:center;
+}
+
+.brand h1{
+  text-shadow: 10px 10px 10px rgb(197, 7, 7);
 }
 
 @media (min-width: 992px) {
@@ -270,14 +276,14 @@ footer a:hover {
 Página index.html 
 *************************************************************/
 .p1 {
-  height: 40vh;
   background-color: var(--bg-dark-color);
   background-image: url(img/stephen.jpg);
   background-repeat: no-repeat;
-  background-size: 30%;
+  background-size: 20%;
   background-position: top right ;
   color: var(--text-light-color);
   padding: 10px 0;
+  border-radius: 2%;
 }
 
 .p1 h1 {
@@ -292,6 +298,36 @@ Página index.html
 .categoria h2 {
   line-height: 1.2;
 }
+
+.categoria{
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.h-red {
+  background: rgb(182, 91, 81);
+  clip-path: polygon(0 0, 70% 0%, 60% 100%, 0% 100%);
+}
+
+.p1{
+  animation: polygons 4s;
+}
+
+@keyframes polygons {
+  25% {
+    clip-path: polygon(20% 0%, 100% 38%, 70% 90%, 0% 100%);
+    background:  rgb(182, 91, 81);
+  }
+  50% {
+    clip-path: polygon(0 46%, 100% 15%, 55% 74%, 0 100%);
+    background: rgb(122, 120, 115);
+  }
+  75% {
+    clip-path: polygon(100% 38%, 100% 38%, 66% 100%, 0 53%);
+    background: rgb(217, 221, 227);
+  }
+}
+
 
 @media (min-width: 992px) {
   .p1 {
@@ -312,8 +348,8 @@ Página index.html
   }
 
   .categoria img{
-    width: 200px;
-    height: 150px;
+    width: 300px;
+    height: 200px;
     padding: 10px;
   }
 
@@ -343,10 +379,23 @@ Página categoria.html
   border-color: rgb(135, 135, 139);
 }
 .cat h1{
-  text-shadow: 10px 10px 10px rgb(197, 7, 7);;
+  text-shadow: 10px 10px 10px rgb(197, 7, 7);
 }
 
+.cat img{
+  width: 80px;
+  height: 80px;
+  float:right;
+  margin-right: 50px;
+}
 
+@media (min-width: 992px) {
+.cat img{
+  width: 160px;
+  height: 80px;
+}
+
+}
 /************************************************************
 Página detall.html
 *************************************************************/
@@ -412,15 +461,50 @@ Página presentación.html
     font-size:2.5em;
 }
 
+.estilo_svg{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.biblio {
+  display: flex;
+}
+
+.biblio img{
+  padding: 15px;
+}
+
+/* Animació rellotge*/
+.l1{
+  animation: roda 2s infinite;
+  transform-origin: 50%;
+}
+
+.l2{
+  animation: roda 15s infinite;
+  transform-origin: 50%;
+}
+
+@keyframes roda {
+    100%{
+    transform: rotate(360deg);
+  } 
+}
+
 @media (min-width: 992px) {
-  .biblio {
-    display: flex;
+  .estilo_svg{
+    width: 200px;
+    height: 200px;
+    display:inline-block;
   }
 
   .biblio img{
-    width: 300px;
-    height: 300px;
-    padding: 20px;
+    width: 350px;
+    height: 350px;
+    padding: 60px;
   }
 
  .presentacio figure{
@@ -468,4 +552,8 @@ Página enlaces.html
   font-weight: 700;
   border-bottom: 4px solid currentColor;
   border-color: rgb(135, 135, 139);
+}
+
+.enlaces ul li{
+  margin-left: 10px;
 }
